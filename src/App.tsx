@@ -1,5 +1,14 @@
+import { Button1, Button2 } from "./components/Button";
+
 function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <div>
+      <Button1 text="sou um botão" />
+      <Button2 />
+      <Button1>Sou outro botão</Button1>
+      <Button2 />
+    </div>
+  );
 }
 
 export default App;
