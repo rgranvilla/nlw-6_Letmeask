@@ -1,46 +1,213 @@
-# Getting Started with Create React App
+[![Banner NLW#6](./assets/nlw6.png)](https://home.devtrails.com.br/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="center">
+<br>
+🚧 NLW#6 - Trilha ReactJS - Letmeask 1.0 🚀 em construção... 🚧
+<br>
+<br>
 
-## Available Scripts
+<p align="center">
 
-In the project directory, you can run:
+  <img alt="GitHub language count" src="https://wakatime.com/badge/github/rgranvilla/01-github-explorer.svg">
 
-### `yarn start`
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/rgranvilla/nlw-5_Podcastr_Next">
+  
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/rgranvilla/nlw-5_Podcastr_Next">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/rgranvilla/nlw-5_Podcastr_Next">
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/rgranvilla/nlw-5_Podcastr_Next">
 
-### `yarn test`
+</p>
+</h3>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Letmeask 1.0
 
-### `yarn build`
+<br>
+<br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 💻 **Sobre o projeto**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Nesta edição do Next Level Week, iremos desenvolver uma aplicação para que o usuário possa fazer perguntas a outros usuários e assim receber uma resposta da comunidade, chamada Letmeask.
+Para isso iremos utilizar o React, Typescript e Firebase.
 
-### `yarn eject`
+Se você quer acompanhar as minhas anotações diárias sobre o projeto, com o passo
+a passo do que foi feito nele, acesse
+[NLW #6 - Personal Notes](https://www.notion.so/Next-Level-Week-6-1-Dia-f7fd9085808c46ee8dba7d9352e522d1)
+e me acompanhe nas redes sociais Twitter e Linkedin(links no final da página).
+<br> <br>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 📖 **Tabela de conteúdos**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [Sobre o projeto](#-sobre-o-projeto)
+- [Tabela de Conteúdo](#-tabela-de-conteúdos)
+- [Funcionalidades](#-funcionalidades)
+- [Layout](#-layout)
+- [Tecnologias](#-tecnologias)
+- [Pré-requisitos](#-pré-requisitos)
+- [Autor](#-autor)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<br>
 
-## Learn More
+## 🔩 **Funcionalidades**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [] ( --- TO DO ---)
+- [] ( --- TO DO ---)
+- [] ( --- TO DO ---)
+- [] ( --- TO DO ---)
+
+A milha extra:
+
+- [] Deploy da aplicação
+- [] Switch para tema Dark/Ligth
+- [] Fazer a responsividades do projeto
+- [] ( --- TO DO ---)
+
+<br>
+
+## 🎨 **Layout**
+
+<br>
+
+<h3 align="center"><b> Web </b></h3>
+<br>
+<br>
+
+<p align="center">
+  <img alt="Tela Inicial - Letmeask" src="./assets/pagina-inicial.png">
+  
+  <br>
+  Tela Inicial - Letmeask
+  <br>
+  <br>
+</p>
+<p align="center">
+  <img alt="Criar nova sala - Letmeask" src="./assets/criar-sala-nova.png">
+  
+  <br>
+  Criar nova sala - Letmeask
+  <br>
+  <br>
+</p>
+<p align="center">
+  <img alt="Sala React Q&A - Letmeask" src="./assets/responder-pergunta.png">
+  
+  <br>
+  Sala React Q&A - Letmeask
+</p>
+
+Acesse [NLW #6 - Figma Layout](<https://www.figma.com/file/prItZM7WRDQNAOPwDxKujP/Letmeask-(Copy)?node-id=45%3A3279>) para visualizar todo o layout que iremos utilizar para nossa aplicação.
+<br>
+<br>
+
+## 🛠 Tecnologias
+
+<br>
+
+Foram utilizadas as seguintes ferramentes no desenvolvimento do projeto:
+
+- [TypeScript](https://www.typescriptlang.org/)
+- [React](https://pt-br.reactjs.org/)
+- [Firebase](https://firebase.google.com/)
+
+<br>
+<br>
+
+## 🖥 Pré-requisitos
+
+<br>
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
+ferramentas [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
+
+Além disto é bom ter um editor para trabalhar com o código como
+[VSCode](https://code.visualstudio.com/). <br> <br>
+
+### 💽 Copiando o repositório
+
+<br>
+
+Com o Github instalado no seu computador, abra o terminal acesse a pasta onde
+deseja baixar o repositório e execute o comando abaixo.
+
+```bash
+# Clone este repositório
+$ git clone git@github.com:rgranvilla/nlw-5_Podcastr_Next.git
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd podcastrnext
+
+
+
+# Instale as dependências
+$ yarn
+
+# Execute a aplicação em modo de desenvolvimento
+$ yarn dev
+
+# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
+```
+
+<br>
+<br>
+
+<h2 align="center">
+
+🎉 Parabéns! 🎉
+
+</h1>
+
+<p align="center">
+
+<img alt="GitHub last commit" src="https://img.shields.io/github/stars/rgranvilla/01-github-explorer">
+</P>
+<br>
+
+Se você chegou até aqui, estará com o aplicativo rodando em sua máquina.
+Sinta-se a vontade para modificar, melhorar e sugerir modificações na aplicação.
+Se você gostou do repositório marque uma **Estrela** 🌟.
+
+<br>
+<br>
+
+# 🤓 Autor
+
+<br>
+<p align="center">
+Importante: esse aplicativo é de autoria da Rocketseat desenvolvido para a Next Level Week #6
+<br>
+<br>
+
+<a href="https://nextlevelweek.com/">
+
+<img src="./assets/inscricoes.png" style="height: 200px"/>
+
+<p align="center">
+acesse e inscreva-se ou aguarde a nova edição
+</p>
+</a>
+<br>
+</p>
+
+## Letmeask Versão 1.0 por
+
+<br>
+
+[![Ricardo Granvilla](./assets/author.png)](https://github.com/rgranvilla)
+
+<a href="https://github.com/rgranvilla">Ricardo Granvilla 🚀</a>
+
+Desenvolvido com muito carinho 😉 para você 👋 Entre em contato! <br>
+
+[![Twitter Badge](https://img.shields.io/badge/-@rgranvilla-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/rgranvilla)](https://twitter.com/rgranvilla)
+[![Linkedin Badge](https://img.shields.io/badge/-Ricardo-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/rgranvilla/)](https://www.linkedin.com/in/rgranvilla/)
+[![Gmail Badge](https://img.shields.io/badge/-rgranvilla@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:rgranvilla@gmail.com)](mailto:rgranvilla@gmail.com)
+
+<br>
+<br>
