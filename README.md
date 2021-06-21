@@ -8,15 +8,15 @@
 
 <p align="center">
 
-  <img alt="GitHub language count" src="https://wakatime.com/badge/github/rgranvilla/01-github-explorer.svg">
+  <img alt="Wakatime Repo Badges" src="https://wakatime.com/badge/github/rgranvilla/nlw-6_Letmeask.svg">
 
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/rgranvilla/nlw-5_Podcastr_Next">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/rgranvilla/nlw-6_Letmeask">
   
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/rgranvilla/nlw-5_Podcastr_Next">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/rgranvilla/nlw-6_letmeask">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/rgranvilla/nlw-5_Podcastr_Next">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/rgranvilla/nlw-6_letmeask">
 
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/rgranvilla/nlw-5_Podcastr_Next">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/rgranvilla/nlw-6_letmeask">
 
 </p>
 </h3>
@@ -73,10 +73,6 @@ A milha extra:
 
 ## 🎨 **Layout**
 
-<br>
-
-<h3 align="center"><b> Web </b></h3>
-<br>
 <br>
 
 <p align="center">
@@ -138,10 +134,10 @@ deseja baixar o repositório e execute o comando abaixo.
 
 ```bash
 # Clone este repositório
-$ git clone git@github.com:rgranvilla/nlw-5_Podcastr_Next.git
+$ git@github.com:rgranvilla/nlw-6_Letmeask.git
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd podcastrnext
+$ cd letmeask
 
 
 
@@ -165,7 +161,7 @@ $ yarn dev
 
 <p align="center">
 
-<img alt="GitHub last commit" src="https://img.shields.io/github/stars/rgranvilla/01-github-explorer">
+<img alt="GitHub last commit" src="https://img.shields.io/github/stars/rgranvilla/nlw-6_letmeask">
 </P>
 <br>
 
