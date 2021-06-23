@@ -57,15 +57,16 @@ e me acompanhe nas redes sociais Twitter e Linkedin(links no final da página).
 
 <br>
 
-- [] ( --- TO DO ---)
-- [] ( --- TO DO ---)
-- [] ( --- TO DO ---)
-- [] ( --- TO DO ---)
+- [x] Criação de um projeto Firebase
+- [x] Autenticação com Firebase
+- [x] Roteamento e Navegação
+- [x] Criação de contextAPI
+- [x] Criação de hooks
 
 A milha extra:
 
 - [] Deploy da aplicação
-- [] Switch para tema Dark/Ligth
+- [x] Switch para tema Dark/Ligth
 - [] Fazer a responsividades do projeto
 - [] ( --- TO DO ---)
 
