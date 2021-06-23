@@ -35,7 +35,8 @@ Para isso iremos utilizar o React, Typescript e Firebase.
 
 Se você quer acompanhar as minhas anotações diárias sobre o projeto, com o passo
 a passo do que foi feito nele, acesse
-[NLW #6 - Personal Notes](https://www.notion.so/Next-Level-Week-6-1-Dia-f7fd9085808c46ee8dba7d9352e522d1)
+[NLW #6 - Personal Notes - Dia 1](https://www.notion.so/Next-Level-Week-6-1-Dia-f7fd9085808c46ee8dba7d9352e522d1)
+[NLW #6 - Personal Notes - Dia 2](https://www.notion.so/Next-Level-Week-6-2-Dia-7530502a78614f08abf0a9c8310a10c9)
 e me acompanhe nas redes sociais Twitter e Linkedin(links no final da página).
 <br> <br>
 
