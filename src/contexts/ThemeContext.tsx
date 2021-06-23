@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useState } from "react";
+import { createContext, ReactNode, useEffect, useState } from "react";
 
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "../themes/theme";
@@ -22,8 +22,20 @@ export function ThemeContextProvider({ children }: ThemeContextProviderProps) {
   const [theme, setTheme] = useState(themes.lightTheme);
   const isLight = theme === themes.lightTheme;
 
+  useEffect(() => {
+    const localTheme = window.localStorage.getItem("theme");
+
+    localTheme && setTheme(JSON.parse(localTheme));
+  }, []);
+
   const toggleTheme = () => {
-    isLight ? setTheme(themes.darkTheme) : setTheme(themes.lightTheme);
+    if (isLight) {
+      window.localStorage.setItem("theme", JSON.stringify(themes.darkTheme));
+      setTheme(themes.darkTheme);
+    } else {
+      window.localStorage.setItem("theme", JSON.stringify(themes.lightTheme));
+      setTheme(themes.lightTheme);
+    }
   };
 
   return (
