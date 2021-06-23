@@ -66,7 +66,7 @@ e me acompanhe nas redes sociais Twitter e Linkedin(links no final da página).
 
 A milha extra:
 
-- [] Deploy da aplicação
+- [ ] Deploy da aplicação
 - [x] Switch para tema Dark/Ligth
 - [ ] Fazer a responsividades do projeto
 - [ ] ( --- TO DO ---)
