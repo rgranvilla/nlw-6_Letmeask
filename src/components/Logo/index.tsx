@@ -7,7 +7,7 @@ function Logo() {
   const { isLight } = useTheme();
 
   const insertedLogo = isLight ? logoImg : logoDarkImg;
-  return <img src={insertedLogo} alt="Logo" />;
+  return <img src={insertedLogo} alt="Letmeask" />;
 }
 
 export default Logo;
