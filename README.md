@@ -68,8 +68,8 @@ A milha extra:
 
 - [] Deploy da aplicação
 - [x] Switch para tema Dark/Ligth
-- [] Fazer a responsividades do projeto
-- [] ( --- TO DO ---)
+- [ ] Fazer a responsividades do projeto
+- [ ] ( --- TO DO ---)
 
 <br>
 
