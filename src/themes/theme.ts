@@ -1,15 +1,15 @@
 export const lightTheme = {
+  title: "Light",
   colors: {
     bgPrimary: "#F8F8F8",
-    bgSecundary: "#FFFFFF",
+    bgSecundary: "#FEFEFE",
     bgContrast: "#835AFD",
+    bgHeader: "#E2E2E2",
 
     buttonBgPrimary: "#835AFD",
-    buttonHoverBgPrimary: "#835AFD",
+    buttonHoverBgPrimary: "#9572FE",
     buttonBgSecundary: "#E73F5D",
-    buttonHoverBgSecundary: "#D73754",
     buttonBgTertiary: "#DBDCDD",
-    buttonHoverBgTertiary: "#CECECE",
 
     textPrimary: "#29292E",
     textSecundary: "#737380",
@@ -28,17 +28,17 @@ export const lightTheme = {
 };
 
 export const darkTheme = {
+  title: "Dark",
   colors: {
     bgPrimary: "#2B2B2B",
-    bgSecundary: "#F8F8F8",
+    bgSecundary: "#E0E0E0",
     bgContrast: "#1F1F1F",
+    bgHeader: "#1A1A1A",
 
     buttonBgPrimary: "#835AFD",
-    buttonHoverBgPrimary: "#835AFD",
+    buttonHoverBgPrimary: "#9572FE",
     buttonBgSecundary: "#E73F5D",
-    buttonHoverBgSecundary: "#D73754",
     buttonBgTertiary: "#DBDCDD",
-    buttonHoverBgTertiary: "#CECECE",
 
     textPrimary: "#F8F8F8",
     textSecundary: "#737380",

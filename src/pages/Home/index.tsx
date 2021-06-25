@@ -1,15 +1,15 @@
 import { FormEvent, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { database } from "../../services/firebase";
 
-import useAuth from "../../hooks/useAuth";
-
-import Logo from "../../components/Logo";
-import illustrationImg from "../../assets/imagens/illustration.svg";
 import googleIconImg from "../../assets/imagens/google-icon.svg";
+import illustrationImg from "../../assets/imagens/illustration.svg";
 
+import { database } from "../../services/firebase";
+import useAuth from "../../hooks/useAuth";
+import Logo from "../../components/Logo";
 import Button from "../../components/Button";
 import ToggleThemeButton from "../../components/ToggleThemeButton";
+
 import { Container } from "./styles";
 
 export function Home() {

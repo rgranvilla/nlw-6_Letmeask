@@ -6,8 +6,10 @@ interface ToggleProps extends React.HTMLProps<HTMLButtonElement> {
 
 export const ToggleContainer = styled.button<ToggleProps>`
   width: 7rem;
-  height: 2rem;
+  height: 2.5rem;
   cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
 
   overflow: hidden;
   ${({ isLight }) =>
@@ -20,32 +22,39 @@ export const ToggleContainer = styled.button<ToggleProps>`
           svg {
           }
         `};
-  border-radius: 0.75rem;
-  padding: 0.5rem;
-  position: relative;
-
   background: ${({ theme }) => theme.colors.themeGradient};
-  font-weight: 600;
-  font-size: 0.875rem;
-  color: ${({ theme }) => theme.colors.textContrast};
 
-  display: flex;
-  justify-content: space-between;
+  div {
+    height: 100%;
+    width: 100%;
 
-  svg {
-    color: ${({ theme }) => theme.colors.textContrast};
-    height: auto;
-    width: 1rem;
-    transition: all 0.5s linear;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    &:first-child {
-      transform: ${({ isLight }) =>
-        isLight ? "translateY(0)" : "translateY(100px)"};
+    span {
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: ${({ theme }) => theme.colors.textContrast};
     }
-    // moon icon
-    &:nth-child(2) {
-      transform: ${({ isLight }) =>
-        isLight ? "translateY(-100px)" : "translateY(0)"};
+
+    svg {
+      color: ${({ theme }) => theme.colors.textContrast};
+      height: auto;
+      width: 1.125rem;
+      transition: all 0.5s linear;
+
+      //sun icon
+      &:first-child {
+        transform: ${({ isLight }) =>
+          isLight ? "translateY(0)" : "translateY(100px)"};
+      }
+      // moon icon
+      &:nth-child(3) {
+        transform: ${({ isLight }) =>
+          isLight ? "translateY(-100px)" : "translateY(0)"};
+      }
     }
   }
 `;

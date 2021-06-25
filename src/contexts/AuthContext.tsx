@@ -1,4 +1,5 @@
 import { ReactNode, useState, useEffect, createContext } from "react";
+import toast from "react-hot-toast";
 
 import { firebase, auth } from "../services/firebase";
 
@@ -11,6 +12,7 @@ type User = {
 type AuthContextData = {
   user: User | undefined;
   signInWithGoogle: () => Promise<void>;
+  signOut: () => Promise<void>;
 };
 
 type AuthContextProviderProps = {
@@ -27,22 +29,19 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
-        if (user) {
-          const { displayName, photoURL, uid } = user;
+        const { displayName, photoURL, uid } = user;
 
-          if (!displayName || !photoURL) {
-            throw new Error("Missing information from Google Account");
-          }
-
-          setUser({
-            id: uid,
-            name: displayName,
-            avatar: photoURL,
-          });
+        if (!displayName || !photoURL) {
+          throw toast.error("Missing information from Google Account");
         }
+
+        setUser({
+          id: uid,
+          name: displayName,
+          avatar: photoURL,
+        });
       }
     });
-
     return () => {
       unsubscribe();
     };
@@ -57,7 +56,7 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
       const { displayName, photoURL, uid } = result.user;
 
       if (!displayName || !photoURL) {
-        throw new Error("Missing information from Google Account");
+        throw toast.error("Missing information from Google Account");
       }
 
       setUser({
@@ -65,7 +64,18 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
         name: displayName,
         avatar: photoURL,
       });
+      throw toast.success(`Você está conectado.`);
     }
+  }
+
+  async function signOut() {
+    if (!user) {
+      return;
+    }
+
+    await auth.signOut();
+    setUser(undefined);
+    throw toast.success(`Você está desconectado.`);
   }
 
   return (
@@ -73,6 +83,7 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
       value={{
         user,
         signInWithGoogle,
+        signOut,
       }}
     >
       {children}

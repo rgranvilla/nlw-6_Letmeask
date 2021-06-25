@@ -7,6 +7,15 @@ export const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
 }
 
+button {
+  cursor: pointer;
+  
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
 html {
   overflow: scroll;
   scroll-behavior: smooth;

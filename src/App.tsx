@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import { ThemeContextProvider } from "./contexts/ThemeContext";
 import { AuthContextProvider } from "./contexts/AuthContext";
+import { ThemeContextProvider } from "./contexts/ThemeContext";
 
 import { Home } from "./pages/Home";
 import { NewRoom } from "./pages/NewRoom";
