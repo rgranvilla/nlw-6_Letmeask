@@ -40,7 +40,7 @@ export const darkTheme = {
     buttonBgSecundary: "#E73F5D",
     buttonBgTertiary: "#DBDCDD",
 
-    textPrimary: "#F8F8F8",
+    textPrimary: "#DBDCDD",
     textSecundary: "#737380",
     textPlaceholder: "#A8A8B3",
     textHighlight: "#835AFD",

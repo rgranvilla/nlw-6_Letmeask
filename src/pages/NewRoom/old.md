@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 import illustrationImg from "../../assets/imagens/illustration.svg";
@@ -12,10 +12,67 @@ import Button from "../../components/Button";
 import { Container } from "./styles";
 import { TagRoom } from "../../components/TagRoom";
 
+type FirebaseRooms = Record<
+  string,
+  {
+    title: string;
+    questions: Record<
+      string,
+      {
+        author: {
+          name: string;
+          avatar: string;
+        };
+        content: string;
+        isAnswered: boolean;
+        isHighlighted: boolean;
+      }
+    >;
+  }
+>;
+
+type RoomsType = {
+  id: string;
+  title: string;
+  questions: {
+    id: string;
+    author: {
+      name: string;
+      avatar: string;
+    };
+    content: string;
+    isAnswered: boolean;
+    isHighlighted: boolean;
+  };
+  amountQuestions: number;
+};
+
 export function NewRoom() {
   const history = useHistory();
   const { user } = useAuth();
   const [newRoom, setNewRoom] = useState("");
+  // const [rooms, setRooms] = useState<RoomsType[]>([]);
+
+  useEffect(() => {
+    const roomRef = database.ref("rooms");
+
+    roomRef.once("value", (room) => {
+      const databaseRoom = room.val();
+      const firebaseRoom: FirebaseRooms = databaseRoom ?? {};
+
+      const parsedRoom = Object.entries(firebaseRoom).map(([key, value]) => {
+        return {
+          id: key,
+          title: value.title,
+          questions: value.questions,
+        };
+      });
+      const newData = parsedRoom.map((value) => value?.questions);
+
+      console.log(newData);
+      console.log(Object.keys(newData[0]).length);
+    });
+  }, []);
 
   async function handleCreateRoom(event: FormEvent) {
     event.preventDefault();
@@ -70,9 +127,11 @@ export function NewRoom() {
                   <div className="separator">
                     ou selecione uma de suas salas
                   </div>
-                  <TagRoom title={"ReactJs"} amountQuestions={12} />
-                  <TagRoom title={"Firebase"} amountQuestions={16} />
-                  <TagRoom title={"NodeJS"} amountQuestions={3} />
+                  {/* {rooms.map(({ id, title }) => {
+                    return (
+                      <TagRoom title={title} amountQuestions={1} key={id} />
+                    );
+                  })} */}
                 </>
               </section>
             </main>

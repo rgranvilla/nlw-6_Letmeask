@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
+  position: fixed;
+  top: 0;
 
   background: ${({ theme }) => theme.colors.bgHeader};
 
@@ -22,5 +24,16 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     gap: 3rem;
+  }
+
+  .room-buttons {
+    display: flex;
+    gap: 1rem;
+
+    align-items: center;
+
+    button {
+      height: 2.5rem;
+    }
   }
 `;

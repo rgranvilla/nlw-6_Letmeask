@@ -15,7 +15,7 @@ export const Container = styled.div`
       color: ${({ theme }) => theme.colors.textContrast};
 
       .aside-content {
-        min-height: calc(100vh - 4.5rem);
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;

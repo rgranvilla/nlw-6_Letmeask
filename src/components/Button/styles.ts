@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ButtonContainer = styled.button`
-  height: 50px;
+  height: 3.125rem;
   border-radius: 8px;
   font-weight: 500;
   background: ${({ theme }) => theme.colors.buttonBgPrimary};
@@ -23,5 +23,17 @@ export const ButtonContainer = styled.button`
 
   &:not(:disabled):hover {
     background: ${({ theme }) => theme.colors.buttonHoverBgPrimary};
+  }
+
+  &.outlined {
+    background: ${({ theme }) => theme.colors.buttonBgTertiary};
+    border: 1px solid ${({ theme }) => theme.colors.buttonBgPrimary};
+    color: ${({ theme }) => theme.colors.buttonBgPrimary};
+    transition: filter 0.3s;
+
+    &:hover {
+      background: ${({ theme }) => theme.colors.buttonBgTertiary};
+      filter: brightness(1.2);
+    }
   }
 `;

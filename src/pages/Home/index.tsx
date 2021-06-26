@@ -1,5 +1,6 @@
 import { FormEvent, useState } from "react";
 import { useHistory } from "react-router-dom";
+import toast from "react-hot-toast";
 
 import googleIconImg from "../../assets/imagens/google-icon.svg";
 import illustrationImg from "../../assets/imagens/illustration.svg";
@@ -14,14 +15,11 @@ import { Container } from "./styles";
 
 export function Home() {
   const history = useHistory();
-  const { user, signInWithGoogle } = useAuth();
+  const { signIn } = useAuth();
   const [roomCode, setRoomCode] = useState("");
 
   async function handleCreateRoom() {
-    if (!user) {
-      await signInWithGoogle();
-    }
-
+    signIn();
     history.push("/rooms/new");
   }
 
@@ -37,6 +35,10 @@ export function Home() {
     if (!roomRef.exists()) {
       alert("Room does not exist.");
       return;
+    }
+
+    if (roomRef.val().closedAt) {
+      throw toast.error("Esta sala foi encerrada.");
     }
 
     history.push(`/rooms/${roomCode}`);
