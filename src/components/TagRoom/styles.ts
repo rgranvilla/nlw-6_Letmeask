@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.button`
-  height: 50px;
+  height: 70px;
+  width: 100%;
   border: 2px solid ${({ theme }) => theme.colors.buttonBgPrimary};
   background: ${({ theme }) => theme.colors.bgHeader};
   border-radius: 0.5rem;
@@ -42,13 +43,37 @@ export const Container = styled.button`
       }
     }
   }
-
-  strong {
+  .content {
     width: 100%;
-    font-weight: 500;
-    font-size: 1.25rem;
-    color: ${({ theme }) => theme.colors.textPrimary};
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.75rem;
+
+    strong {
+      width: 100%;
+      font-weight: 500;
+      font-size: 1.125rem;
+      color: ${({ theme }) => theme.colors.textPrimary};
+    }
+  }
+
+  .to-answers {
+    width: 100%;
+    padding-right: 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+
+    svg {
+      height: 1.25rem;
+      width: 1.25rem;
+      color: ${({ theme }) => theme.colors.colorHighlight};
+    }
+
+    span {
+      color: ${({ theme }) => theme.colors.colorHighlight};
+    }
   }
 
   .access-room {

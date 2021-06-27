@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes } from "react";
-import { FiLogIn, FiLogOut } from "react-icons/fi";
+import { FiLogOut } from "react-icons/fi";
 
 import useAuth from "../../hooks/useAuth";
 
@@ -7,13 +7,7 @@ import { ButtonContainer } from "./styles";
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
 function Button(props: ButtonProps) {
-  const { user, signOut, signInWithGoogle } = useAuth();
-
-  async function handleSignIn() {
-    if (!user) {
-      await signInWithGoogle();
-    }
-  }
+  const { user, signOut } = useAuth();
 
   async function handleSignOut() {
     if (user) {
@@ -25,15 +19,9 @@ function Button(props: ButtonProps) {
 
   return (
     <>
-      {user ? (
-        <ButtonContainer onClick={handleSignOut} {...props}>
-          <FiLogOut />
-        </ButtonContainer>
-      ) : (
-        <ButtonContainer onClick={handleSignIn} {...props}>
-          <FiLogIn />
-        </ButtonContainer>
-      )}
+      <ButtonContainer onClick={handleSignOut} {...props}>
+        <FiLogOut />
+      </ButtonContainer>
     </>
   );
 }

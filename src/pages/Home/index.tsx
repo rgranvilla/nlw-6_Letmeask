@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import toast from "react-hot-toast";
 
@@ -15,12 +15,17 @@ import { Container } from "./styles";
 
 export function Home() {
   const history = useHistory();
-  const { signIn } = useAuth();
+  const { signIn, user } = useAuth();
   const [roomCode, setRoomCode] = useState("");
 
+  useEffect(() => {
+    if (user) {
+      history.push(`/rooms/new`);
+    }
+  }, [user, history]);
+
   async function handleCreateRoom() {
-    signIn();
-    history.push("/rooms/new");
+    await signIn();
   }
 
   async function handleJoinRoom(event: FormEvent) {
@@ -53,13 +58,10 @@ export function Home() {
       </aside>
       <main>
         <div className="main-content">
-          <div className="toggleThemeContainer">
-            <ToggleThemeButton />
-          </div>
           <Logo />
           <button onClick={handleCreateRoom} className="create-room">
             <img src={googleIconImg} alt="" />
-            Crie sua sala com o Google
+            <p>Entrar com o Google</p>
           </button>
           <div className="separator">ou entre em uma sala</div>
           <form onSubmit={handleJoinRoom}>
@@ -71,6 +73,9 @@ export function Home() {
             />
             <Button type="submit">Entrar na sala</Button>
           </form>
+          <div className="toggleThemeContainer">
+            <ToggleThemeButton />
+          </div>
         </div>
       </main>
     </Container>

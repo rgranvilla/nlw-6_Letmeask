@@ -26,8 +26,10 @@ export function Room() {
 
   useEffect(() => {
     async function isOpen() {
-      const ref = await database.ref(`rooms/${roomId}/closedAt`).get();
-      if (!(ref.val() === null)) {
+      const roomIsOpenRef = await database
+        .ref(`rooms/${roomId}/closedAt`)
+        .get();
+      if (!(roomIsOpenRef.val() === null)) {
         toast.error("A sala foi encerrada.");
         history.push("/");
       }

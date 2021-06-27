@@ -1,5 +1,6 @@
 import { ReactNode, useState, useEffect, createContext } from "react";
 import toast from "react-hot-toast";
+import { useHistory } from "react-router-dom";
 
 import { firebase, auth } from "../services/firebase";
 
@@ -26,6 +27,7 @@ export const AuthContext = createContext({} as AuthContextData);
 // Provider autorization context to aplication with all authorization rules
 export function AuthContextProvider({ children }: AuthContextProviderProps) {
   const [user, setUser] = useState<User>();
+  const history = useHistory();
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -76,12 +78,9 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
   }
 
   async function signOut() {
-    if (!user) {
-      return;
-    }
-
     await auth.signOut();
     setUser(undefined);
+    history.push(`/`);
     throw toast.success(`Você está desconectado.`);
   }
 

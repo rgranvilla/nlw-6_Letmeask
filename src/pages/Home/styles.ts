@@ -54,9 +54,9 @@ export const Container = styled.div`
     text-align: center;
 
     .toggleThemeContainer {
+      margin-top: 4rem;
       &:first-child {
         align-self: center;
-        margin-bottom: 4rem;
       }
     }
 
@@ -94,6 +94,7 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
 
     cursor: pointer;
     border: 0;
@@ -102,6 +103,11 @@ export const Container = styled.div`
 
     img {
       margin-right: 0.5rem;
+    }
+
+    p {
+      font-size: 1.125rem;
+      /* background: yellow; */
     }
 
     &:hover {

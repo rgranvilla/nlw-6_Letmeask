@@ -108,6 +108,7 @@ export const Container = styled.div`
       max-width: 320px;
       align-items: stretch;
       text-align: center;
+      padding-bottom: 4rem;
 
       .separator {
         font-size: 0.875rem;
