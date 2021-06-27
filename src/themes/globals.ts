@@ -27,6 +27,10 @@ body {
   color: ${({ theme }) => theme.colors.textPrimary};
 }
 
+a {
+  text-decoration: none;
+}
+
 body, input, button, textarea {
   font: 400 16px 'Roboto', sans-serif;
 }

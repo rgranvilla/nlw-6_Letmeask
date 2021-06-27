@@ -25,6 +25,11 @@ export const ButtonContainer = styled.button`
     background: ${({ theme }) => theme.colors.buttonHoverBgPrimary};
   }
 
+  &:disabled {
+    filter: opacity(0.5);
+    cursor: not-allowed;
+  }
+
   &.outlined {
     background: ${({ theme }) => theme.colors.buttonBgTertiary};
     border: 1px solid ${({ theme }) => theme.colors.buttonBgPrimary};

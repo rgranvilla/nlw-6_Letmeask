@@ -24,7 +24,7 @@ export const Container = styled.div`
         padding: 0.5rem 1rem;
         color: ${({ theme }) => theme.colors.textContrast};
         font-weight: 500;
-        font-size: 0.872rem;
+        font-size: 0.875rem;
       }
     }
 

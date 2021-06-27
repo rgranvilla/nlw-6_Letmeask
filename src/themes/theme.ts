@@ -3,6 +3,7 @@ export const lightTheme = {
   colors: {
     bgPrimary: "#F8F8F8",
     bgSecundary: "#FEFEFE",
+    bgTertiary: "#F4F0FF",
     bgContrast: "#835AFD",
     bgHeader: "#E2E2E2",
 
@@ -32,6 +33,7 @@ export const darkTheme = {
   colors: {
     bgPrimary: "#2B2B2B",
     bgSecundary: "#E0E0E0",
+    bgTertiary: "#333333",
     bgContrast: "#1F1F1F",
     bgHeader: "#1A1A1A",
 

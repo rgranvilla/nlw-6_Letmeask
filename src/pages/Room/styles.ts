@@ -17,7 +17,7 @@ export const Container = styled.div`
         color: ${({ theme }) => theme.colors.textPrimary};
       }
 
-      span {
+      .amount-questions {
         margin-left: 1rem;
         background: ${({ theme }) => theme.colors.colorHighlight};
         border-radius: 30rem;
@@ -38,6 +38,11 @@ export const Container = styled.div`
         box-shadow: 0 0.125rem 0.75rem rgba(0, 0, 0, 0.04);
         resize: vertical;
         min-height: 130px;
+
+        &:disabled {
+          filter: opacity(0.5) brightness(0.9);
+          cursor: not-allowed;
+        }
       }
 
       .form-footer {
@@ -72,16 +77,11 @@ export const Container = styled.div`
           button {
             background: transparent;
             border: 0;
-            color: ${({ theme }) => theme.colors.textHighlight};
             text-decoration: underline;
             font-size: 0.875rem;
             font-weight: 500;
             cursor: pointer;
             transition: filter 0.3s;
-
-            &:hover {
-              filter: brightness(0.8);
-            }
           }
         }
       }

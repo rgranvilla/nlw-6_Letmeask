@@ -1,5 +1,5 @@
 import { HTMLProps, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 import { database } from "../../services/firebase";
 
@@ -54,7 +54,9 @@ function Header({ isAdmin, ...props }: HeaderProps) {
   return (
     <Container>
       <div className="content">
-        <LogoImg />
+        <Link to="/">
+          <LogoImg />
+        </Link>
         <div className="header-right-side">
           <div>
             {roomId && (

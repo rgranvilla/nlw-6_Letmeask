@@ -38,6 +38,7 @@ function useRoom(roomId: string) {
   const { user } = useAuth();
   const [questions, setQuestions] = useState<QuestionType[]>([]);
   const [title, setTitle] = useState<string>("");
+  const [isAdmin, setIsAdmin] = useState<boolean>(false);
 
   useEffect(() => {
     const roomRef = database.ref(`rooms/${roomId}`);
@@ -62,6 +63,10 @@ function useRoom(roomId: string) {
         }
       );
 
+      const firebaseRoomAuthor: string = databaseRoom.authorId ?? {};
+
+      setIsAdmin(firebaseRoomAuthor === user?.id);
+
       setTitle(databaseRoom.title);
       setQuestions(parsedQuestion);
     });
@@ -71,7 +76,7 @@ function useRoom(roomId: string) {
     };
   }, [roomId, user?.id]);
 
-  return { questions, title };
+  return { questions, title, isAdmin };
 }
 
 export default useRoom;

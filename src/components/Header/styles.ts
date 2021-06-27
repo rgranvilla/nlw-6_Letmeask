@@ -4,6 +4,7 @@ export const Container = styled.div`
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 2;
 
   background: ${({ theme }) => theme.colors.bgHeader};
 
@@ -14,9 +15,10 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    > img {
-      max-height: 2.8125rem;
+    a {
+      > img {
+        max-height: 2.8125rem;
+      }
     }
   }
 
